@@ -1,7 +1,7 @@
 locals {
-  location = data.terraform_remote_state.vnet.outputs.location
+  location            = data.terraform_remote_state.vnet.outputs.location
   resource_group_name = data.terraform_remote_state.vnet.outputs.rg_name
-  subnet_gateway_id = data.terraform_remote_state.vnet.outputs.subnet_gateway_id
+  subnet_gateway_id   = data.terraform_remote_state.vnet.outputs.subnet_gateway_id
 }
 
 resource "azurerm_public_ip" "public_ip_1" {
@@ -35,7 +35,7 @@ resource "azurerm_virtual_network_gateway" "virtual_network_gateway" {
   # Configuration for high availability
   active_active = true
   # This might me expensive, check the prices  
-  sku           = "VpnGw1"
+  sku = "VpnGw1"
 
   # Configuring the two previously created public IP Addresses
   ip_configuration {
