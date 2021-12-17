@@ -1,5 +1,4 @@
 locals {
-  name = data.terraform_remote_state.vnet.outputs.name
   location = data.terraform_remote_state.vnet.outputs.location
   resource_group_name = data.terraform_remote_state.vnet.outputs.rg_name
   subnet_gateway_id = data.terraform_remote_state.vnet.outputs.subnet_gateway_id
