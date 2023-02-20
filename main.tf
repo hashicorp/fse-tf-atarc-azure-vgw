@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: MPL-2.0
+
 locals {
   location            = data.terraform_remote_state.vnet.outputs.location
   resource_group_name = data.terraform_remote_state.vnet.outputs.rg_name
